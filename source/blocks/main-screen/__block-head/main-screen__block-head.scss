@@ -1,0 +1,6 @@
+.main-screen__block-head {
+  max-width: 60%;
+  @media (max-width: $lg - 1px){
+    max-width: 100%;
+  }
+}

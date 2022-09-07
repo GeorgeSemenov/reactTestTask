@@ -1,0 +1,18 @@
+.ssl-cert__ssl-types {
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  gap: 20px;
+  counter-reset: sslItems 0;
+  margin-bottom: 62px ; 
+
+  @media (max-width: $md - 1px){
+/*     margin-bottom: 15px ;  */
+  }
+}
+
+/*Чтобы перебить свойство swiperJS на больших экранах*/
+ul.ssl-cert__ssl-types{
+  @media (min-width: $xl - 1px){
+    display:grid;
+  }
+}

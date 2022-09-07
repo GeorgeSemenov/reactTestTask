@@ -1,0 +1,8 @@
+.faq-section__accordeons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (max-width: $xl - 1px) {
+      justify-content: space-around;
+    }
+}

@@ -1,0 +1,8 @@
+.header__service-item {
+  position: relative;
+  @media (max-width: $md - 1px) {
+    transition: height .3s linear;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,19 @@
+.block-head__description {
+  font-size: 2rem;
+  line-height: 150%;
+  width: 62%;
+  @media (max-width: $lg - 1px){
+    width: 100%;
+    text-align: center;
+  }
+  span{
+    font-weight: 600;
+  }
+}
+
+.block-head__description + .block-head__description{
+  margin-top: 24px;
+  @media (max-width: $md - 1px){
+      margin-top: 15px  ;
+  }
+}

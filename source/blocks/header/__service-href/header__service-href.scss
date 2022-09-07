@@ -1,0 +1,29 @@
+.header__service-href {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 18.5px;
+  line-height: 150%;
+
+  color: $header__service-href--Color;
+
+  &:hover{
+    color: $header__service-href-hover--Color;
+  }
+  &:active{
+    color: $header__service-href-active--Color;
+  }
+  &_dropdown{
+    &:after{
+      transition: transform 0.2s linear,height 0.2s linear;
+      color: $header__service-href_dropdown-after--Color;
+      content: ' ';
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0L7 5L12 0L14 1L7 8L0 1L2 0Z' fill='%23262626'/%3E%3C/svg%3E%0A");
+      width: 14px;
+      height: 8px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    &_pic-rotated:after{transform: rotate(180deg);}
+    &:hover:after{color: $header__service-href_dropdown-after-hover--Color;}
+  }
+}

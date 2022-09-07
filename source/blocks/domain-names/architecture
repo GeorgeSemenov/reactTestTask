@@ -1,0 +1,10 @@
+section.domain-names{
+  block-head,
+  text-container,
+  ul__names[names,name,li__name]{
+    li__name<name>{
+      p__domain-abbr<name>
+      p__price<price,period>{span!period!}
+    }
+  }
+}

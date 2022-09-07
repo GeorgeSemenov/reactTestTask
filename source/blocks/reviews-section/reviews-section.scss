@@ -1,0 +1,29 @@
+.reviews-section {
+    color: $reviews-section--Color;
+    padding-top: 102px;
+    font-size: 20px;
+    line-height: 150%;
+    padding-bottom: 55px;
+
+  @media (max-width: $md - 1px){
+      padding-top: 15px ;
+  }
+
+  .content-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+@import '__text-container/reviews-section__text-container';
+@import '__title/reviews-section__title';
+@import '__texts/reviews-section__texts';
+@import '__text/reviews-section__text';
+@import '__reviews/reviews-section__reviews';
+@import '__review-cards/reviews-section__review-cards';
+@import '__review-card/reviews-section__review-card';
+@import '__review-card-text/reviews-section__review-card-text';
+@import '__avatar-container/reviews-section__avatar-container';
+@import '__pic/reviews-section__pic';
+@import '__caption/reviews-section__caption';
+@import '__review-pagination/reviews-section__review-pagination';

@@ -1,0 +1,10 @@
+.ways-to-pay__pay-system-pic {
+  transition: filter .5s;
+  filter: grayscale(1);
+}
+
+.ways-to-pay__pay-system:hover, .ways-to-pay__pay-system:active{
+  .ways-to-pay__pay-system-pic{
+    filter: grayscale(0)
+  }
+}

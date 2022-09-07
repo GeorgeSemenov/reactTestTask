@@ -1,0 +1,8 @@
+mixin header__services(modifier)
+  if modifier["services"] == undefined
+      - modifier["services"] = [{text: "empty__services"}];
+  ul.header__services&attributes(attributes)
+    each service in modifier.services
+      if service["modifier"] == undefined
+        - service["modifier"] = "";
+      +header__service-item(service)(class=service.modifier)

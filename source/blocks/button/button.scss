@@ -1,0 +1,37 @@
+.button {
+  @include unselectable();
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 150%;
+  padding: 7px 43px;
+  background-color: $button--BGColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  cursor: pointer;
+  color: $button--Color;
+  transition: .3s background-color;
+  &:hover{
+    background-color: $button-hover--BGColor; 
+    transition: .3s background-color;
+  }
+  &:active{background-color: $button-active--BGColor}
+  @media (max-width: $md - 1px){
+    font-size: 2.5rem;
+    padding: 7px 7px;
+  }
+
+  &_theme_orange{
+    background-color: $button_theme_orange--BGColor;
+  }
+  &_theme_dark-blue{
+    background-color: $button_theme_dark-blue--BGColor;
+    color: $button_theme_dark-blue--Color;
+  }
+}
+
+/*
+  buttonText
+
+  $button--BGColor
+  $button_theme_orangeo--BGColor
+*/

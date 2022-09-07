@@ -1,0 +1,5 @@
+mixin main-screen__label(modifier)
+  if modifier["labelText"] == undefined
+    - modifier["labelText"] = "empty__labelText";
+  p.main-screen__label&attributes(attributes)!=modifier.labelText
+    span!=modifier.labelHighlightedText

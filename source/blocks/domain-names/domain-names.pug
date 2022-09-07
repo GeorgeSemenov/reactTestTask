@@ -1,0 +1,13 @@
+include __content/domain-names__content.pug
+include __name/domain-names__name.pug
+include __price/domain-names__price.pug
+include __domain-abbr/domain-names__domain-abbr.pug
+include __names/domain-names__names.pug
+include ../block-head/block-head.pug
+include ../text-container/text-container.pug
+mixin domain-names(modifier)
+  if modifier == undefined
+    - modifier = {};
+  section.domain-names&attributes(attributes)
+    +block-head(modifier.blockHead)(class="domain-names__block-head")
+    +domain-names__content(modifier)

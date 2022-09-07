@@ -1,0 +1,8 @@
+.text-container__button {
+  letter-spacing: 0.035em;
+  margin-top: 77px  ;
+  @include px(23px);
+  @media (max-width: $xl - 1px){
+      margin-top: 15px  ;
+  }
+}

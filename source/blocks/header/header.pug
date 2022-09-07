@@ -1,0 +1,27 @@
+include __top-container/header__top-container.pug
+include __bottom-container/header__bottom-container.pug
+include __bottom-content/header__bottom-content.pug
+include __top-content/header__top-content.pug
+include __lk-link/header__lk-link.pug
+include __private-area/header__private-area.pug
+include __service-subitem-href/header__service-subitem-href.pug
+include __service-subitem/header__service-subitem.pug
+include __service-submenu/header__service-submenu.pug
+include __logotype-container/header__logotype-container.pug
+include __sandwich-ico/header__sandwich-ico.pug
+include __sandwich-ico-container/header__sandwich-ico-container.pug
+include __service-href/header__service-href.pug
+include __service-item/header__service-item.pug
+include __service-item/header__service-item.pug
+include __services/header__services.pug
+include __nav-services/header__nav-services.pug
+include ../logotype/logotype.pug
+include ../button/button.pug
+include ../contacts/contacts.pug
+include ../../img/SVG/avatar.pug
+mixin header(modifier)
+  if modifier == undefined
+    - modifier = {}
+  header.header&attributes(attributes)
+    +header__top-content(modifier)
+    +header__bottom-content(modifier)

@@ -1,0 +1,15 @@
+.hosting-prices__column-head {
+  background-color: $hosting-prices__column-head--BGColor;
+  width: $column-width;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: $columns-gap;
+  &:first-child{margin-left: 0;}
+  box-shadow: 0px 4px 4px rgba(183, 183, 183, 0.43);
+  border-radius: 10px 10px 0px 0px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}

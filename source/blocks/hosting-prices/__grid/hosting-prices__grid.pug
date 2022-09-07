@@ -1,0 +1,7 @@
+mixin hosting-prices__grid(modifier)
+  if modifier["columns"] == undefined
+    - modifier["columns"] = [{}];
+  .hosting-prices__grid&attributes(attributes)
+    +hosting-prices__heads(modifier)
+    +hosting-prices__grid-label(modifier)
+    +hosting-prices__bodies(modifier)

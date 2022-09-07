@@ -1,0 +1,11 @@
+.CMS-support__logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    @media (max-width: $sm - 1px) { 
+        max-height: 500px;
+        overflow-y: scroll;
+    }
+}

@@ -1,0 +1,34 @@
+section.ssl-cert {
+  padding: 95px 0;
+    @media (max-width: $md - 1px){
+    padding: 15px 0;
+  }
+}
+/*
+blockHead: {headTag: "",
+  text: "",
+  description: [//Массив параграфов описания
+  []//Массив чередующихся текстов, обычный и выделенный чередуются
+  ],
+},
+sslTypes: [{modifier: "", sslType:{
+    title:"",
+    advantages: [{modifier:"", advantage: ""}],
+    price:{price:"", period: ""}
+  },
+}],
+buttonText: "",
+
+$ssl-cert__ssl-title--Color;
+*/
+@import '__block-head/ssl-cert__block-head';
+@import '__ssl-types/ssl-cert__ssl-types';
+@import '__ssl-type/ssl-cert__ssl-type';
+@import '__ssl-title/ssl-cert__ssl-title';
+@import '__ssl-advantages/ssl-cert__ssl-advantages';
+@import '__ssl-advantage/ssl-cert__ssl-advantage';
+@import '__ssl-price/ssl-cert__ssl-price';
+@import '__button/ssl-cert__button';
+@import '__title-container/ssl-cert__title-container';
+@import '__button-container/ssl-cert__button-container';
+@import '__swiper-button-navigation/ssl-cert__swiper-button-navigation';

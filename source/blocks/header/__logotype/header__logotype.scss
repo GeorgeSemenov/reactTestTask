@@ -1,0 +1,10 @@
+.header__logotype {
+    
+  @media (max-width: $md - 1px){
+    top: auto;
+    left: auto;
+    position: static;
+    width: 75px;
+    height: 45px;
+  }
+}

@@ -1,0 +1,17 @@
+.header__service-submenu {
+  display: none;
+  position:absolute;
+  left:0;
+  z-index: 1;
+  transition: opacity .25s ease;
+  background-color: $header__service-submenu--BGColor;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  @media (max-width: $md - 1px){
+    opacity: 1;
+    position: relative;
+  }
+}

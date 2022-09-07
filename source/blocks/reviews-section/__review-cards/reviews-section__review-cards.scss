@@ -1,0 +1,16 @@
+.reviews-section__review-cards {
+    width: 559px;
+    margin-left: 10px;
+
+    @media (max-width: $xl - 1px) { 
+        @include mx(auto);
+    }
+}
+
+.content-container{
+    .reviews-section__review-cards{
+        padding-bottom: 50px;
+        height: auto;
+        margin-bottom: 13px ; 
+    }
+}

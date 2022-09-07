@@ -1,0 +1,11 @@
+.ssl-cert__ssl-title {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 150%;
+  text-align: center;
+  color: $ssl-cert__ssl-title--Color;
+  @include px(15px);
+  @media (max-width: $md - 1px){
+      font-size: 2.5rem;
+  }
+}

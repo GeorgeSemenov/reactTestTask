@@ -1,0 +1,28 @@
+.ssl-cert__ssl-type {
+  background: $ssl-cert__ssl-type--BGColor;
+  border: $ssl-cert__ssl-type--BGColor;
+  box-shadow: 0px 4px 4px rgba(183, 183, 183, 0.43);
+  border-radius: 10px;
+  position: relative;
+  counter-increment: sslItems;
+  display: flex;
+  flex-direction: column;
+  min-height: 526px;
+  padding-bottom: 26px;
+  
+  &:before{
+    content: counter(sslItems);
+    position: absolute;
+    color: $ssl-cert__ssl-type-before--Color;
+    font-weight: 600;
+    font-size: 7.2rem;
+    line-height: 150%;
+    opacity: 0.5;
+    top: -8px;
+    left: 12px;
+  }
+}
+
+li.ssl-cert__ssl-type{
+    height: auto;       
+}
