@@ -3,7 +3,6 @@ function Task__checkbox(props){
   return(
     <input 
     type="checkbox"
-    checked
     class="task__checkbox">
 
     </input>
