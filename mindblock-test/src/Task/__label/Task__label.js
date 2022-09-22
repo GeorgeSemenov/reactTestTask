@@ -1,9 +1,9 @@
 import './Task__label.css';
 function Task__label(props){
   return(
-    <div class="task__label">
-
-    </div>
+    <p className="task__label" >
+      {props.taskName}
+    </p>
   )
 }
 export default Task__label;

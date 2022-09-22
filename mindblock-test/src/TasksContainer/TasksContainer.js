@@ -5,7 +5,7 @@ function TasksContainer(props){
   let times = props.times;
   return (
     <div >
-      <h3 class="tasksContainer">lists container entered the chat {times} times</h3>
+      <h3 className="tasksContainer">lists container entered the chat {times} times</h3>
       <Task/>
     </div>
   )

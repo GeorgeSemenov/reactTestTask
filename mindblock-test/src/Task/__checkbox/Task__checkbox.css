@@ -2,13 +2,14 @@
   position: relative;
   width:  100px;
   height:  100px;
-  display: block;
+  display: inline-block;
   appearance: none;
   border:  1px solid;
   border-radius: 100%;
 }
 .task__checkbox:checked{
   background-color: gray;
+  opacity: 0.5;
 }
 .task__checkbox:checked:before,
 .task__checkbox:checked:after{

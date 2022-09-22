@@ -1,3 +1,7 @@
 .task{
-  
+  display: inline-flex;
+  align-items: center;
+}
+.task.task_check{
+    opacity: 0.5;
 }

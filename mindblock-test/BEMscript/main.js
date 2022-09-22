@@ -24,9 +24,11 @@ if(answer.split('.').length>1){//Если указан тэг
 cf(`./${compName}`);//В папке где будет запущен скрипт вызывающий main.js будет создана папка с именем {answer}
 wtf(`./${compName}/${parentName + compName}.js`,
     `import './${parentName + compName}.css';
+import $ from 'jquery';
+import { useState } from 'react';
 function ${parentName + compName}(props){
   return(
-    <${tag} class="${scfl(parentName + compName,"lower")}">
+    <${tag} className="${scfl(parentName + compName,"lower")}">
 
     </${tag}>
   )
