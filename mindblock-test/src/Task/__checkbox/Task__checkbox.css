@@ -1,11 +1,12 @@
 .task__checkbox{
   position: relative;
-  width:  100px;
-  height:  100px;
+  width:  30px;
+  height:  30px;
   display: inline-block;
   appearance: none;
   border:  1px solid;
   border-radius: 100%;
+  cursor:  pointer;
 }
 .task__checkbox:checked{
   background-color: gray;

@@ -2,12 +2,17 @@ import './TasksContainer.css';
 import Task from '../Task/Task';
 
 function TasksContainer(props){
-  let times = props.times;
+  let ulContent=[] ;
+  props.tasks.forEach((task,index)=>{
+    ulContent.push(<Task
+      taskName={task.label}
+      isChecked={task.isChecked}
+    />)
+  })
   return (
-    <div >
-      <h3 className="tasksContainer">lists container entered the chat {times} times</h3>
-      <Task/>
-    </div>
+    <ul>
+      {ulContent}
+    </ul>
   )
 }
 
