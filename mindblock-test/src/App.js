@@ -3,12 +3,6 @@ import AddTaskPanel from './AddTaskPanel/AddTaskPanel';
 import TasksContainer from './TasksContainer/TasksContainer';
 import { useState } from 'react';
 import './App.css';
-// let tasks = [
-//   {label:"Задача №1", isChecked:false},
-//   {label:"Задача №2", isChecked:true},
-//   {label:"Задача №3", isChecked:true},
-//   {label:"Задача №4", isChecked:false},
-// ]
 function App() {
   const [tasks, setTasks] = useState(
     [
@@ -45,7 +39,15 @@ function App() {
   );
 
   function addTaskFunc(taskLabel){
-    setTasks(tasks.push({label:taskLabel, isChecked:false}))
+    setTasks(previousState =>{
+      return{ ...previousState, {label:taskLabel, isChecked:false}}
+    });
+    // setTasks(tasks.push({label:taskLabel, isChecked:false}))
+    //   const updateColor = () => {
+    // setCar(previousState => {
+    //   return { ...previousState, color: "blue" }
+    // });
+  }
   }
 }
 
