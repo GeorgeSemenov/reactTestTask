@@ -6,13 +6,16 @@ import './AddTaskPanel.css';
 import { useState } from 'react';
 
 function AddTaskPanel(props){
+  const [inputValue,setInputValue] = useState(undefined)
   return(
     <div className="addTaskPanel">
       <__input
         modifier={props.modifier}
+        changeInputFunc={(inputValue)=>setInputValue(inputValue)}
       />
       <__addButton
         modifier={props.modifier}
+        addButtonClickFunc={addButtonClickFunc}
       />
       <__checkbox
         modifier={props.modifier}
@@ -23,5 +26,11 @@ function AddTaskPanel(props){
 
     </div>
   )
+
+  function addButtonClickFunc(){
+    if(inputValue && inputValue!=''){
+      props.addTaskFunc(inputValue);
+    }
+  }
 }
 export default AddTaskPanel;

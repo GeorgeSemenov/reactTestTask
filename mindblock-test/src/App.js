@@ -1,17 +1,28 @@
 import logo from './logo.svg';
 import AddTaskPanel from './AddTaskPanel/AddTaskPanel';
 import TasksContainer from './TasksContainer/TasksContainer';
+import { useState } from 'react';
 import './App.css';
-let tasks = [
-  {label:"Задача №1", isChecked:false},
-  {label:"Задача №2", isChecked:true},
-  {label:"Задача №3", isChecked:true},
-  {label:"Задача №4", isChecked:false},
-]
+// let tasks = [
+//   {label:"Задача №1", isChecked:false},
+//   {label:"Задача №2", isChecked:true},
+//   {label:"Задача №3", isChecked:true},
+//   {label:"Задача №4", isChecked:false},
+// ]
 function App() {
+  const [tasks, setTasks] = useState(
+    [
+      {label:"Задача №1", isChecked:false},
+      {label:"Задача №2", isChecked:true},
+      {label:"Задача №3", isChecked:true},
+      {label:"Задача №4", isChecked:false},
+    ]
+  );
   return (
     <div className="App endos">
-      <AddTaskPanel/>
+      <AddTaskPanel
+        addTaskFunc={addTaskFunc}
+      />
       <h3 className="tasksContainer-title">you have {tasks.length} tasks</h3>
       <TasksContainer 
         tasks={tasks}
@@ -32,6 +43,10 @@ function App() {
       </header>
     </div>
   );
+
+  function addTaskFunc(taskLabel){
+    setTasks(tasks.push({label:taskLabel, isChecked:false}))
+  }
 }
 
 export default App;

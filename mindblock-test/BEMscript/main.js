@@ -24,7 +24,7 @@ if(process.argv[2]){//Если скрипт вызван с аргументом
 cf(`./${compName}`);//В папке где будет запущен скрипт вызывающий main.js будет создана папка с именем {answer}
 wtf(`./${compName}/${parentName + compName}.js`,
     `import './${parentName + compName}.css';
-import { useState } from 'react';
+//import { useState } from 'react';
 function ${parentName + compName}(props){
   return(
     <${tag} className="${scfl(parentName + compName,"lower")}">
