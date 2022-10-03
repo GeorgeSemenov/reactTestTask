@@ -1,3 +1,24 @@
 .task__label{
   display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.task__label:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  transform: translateY(50%);
+  top: 50%;
+  left: 100%;
+  background-color: black;
+  transition: left 0.5s linear;
+}
+
+.task_checked .task__label{
+    opacity: 0.5;
+}
+.task_checked .task__label:before{
+  left: 0;
 }

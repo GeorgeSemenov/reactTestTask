@@ -1,24 +1,5 @@
 .task{
   display: flex;
   align-items: center;
-  overflow: hidden;
-  position: relative;
   transition: opacity 0.5s linear;
-}
-.task:before{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  transform: translateY(50%);
-  top: 50%;
-  left: 100%;
-  background-color: black;
-  transition: left 0.5s linear;
-}
-.task.task_checked{
-    opacity: 0.5;
-}
-.task.task_checked:before{
-  left: 0;
 }

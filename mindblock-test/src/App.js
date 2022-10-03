@@ -12,10 +12,18 @@ function App() {
       {label:"Задача №4", isChecked:false},
     ]
   );
+  const [isCompletedTasksHidden, setFlagToVisibilityCompletedTasks] = useState(false);
+  let modifier = {
+    status: "status",
+    completeTaskCheckboxClickFunct : function (){
+      setFlagToVisibilityCompletedTasks(!isCompletedTasksHidden);
+    }
+  };
   return (
     <div className="App endos">
       <AddTaskPanel
         addTaskFunc={addTaskFunc}
+        modifier={modifier}
       />
       <h3 className="tasksContainer-title">you have {tasks.length} tasks</h3>
       <TasksContainer 
@@ -39,15 +47,15 @@ function App() {
   );
 
   function addTaskFunc(taskLabel){
-    setTasks(previousState =>{
-      return{ ...previousState, {label:taskLabel, isChecked:false}}
-    });
-    // setTasks(tasks.push({label:taskLabel, isChecked:false}))
-    //   const updateColor = () => {
-    // setCar(previousState => {
-    //   return { ...previousState, color: "blue" }
-    // });
-  }
+    let altTasks = tasks.map(item=> item);
+    altTasks.push({label:taskLabel, isChecked:false});
+    setTasks(altTasks);
+
+    //В интернетах нашёл такое решение, но оно не работает
+    //Выдаёт множество обшибок
+    // setTasks(previousState =>{
+    //   return{ ...previousState, `${label:taskLabel, isChecked:false}`}
+    // }); // неудачная попытка.
   }
 }
 

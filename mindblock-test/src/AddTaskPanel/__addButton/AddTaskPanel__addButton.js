@@ -5,6 +5,7 @@ function AddTaskPanel__addButton(props){
     <button 
       className="addTaskPanel__addButton"
       onClick={props.addButtonClickFunc}
+      modifier = {props.modifier}
     >
       дробавить взад ачу
     </button>
