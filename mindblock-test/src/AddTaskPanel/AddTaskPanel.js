@@ -12,10 +12,11 @@ function AddTaskPanel(props){
       <__input
         modifier={props.modifier}
         changeInputFunc={(inputValue)=>setInputValue(inputValue)}
+        addTaskFuncWithValue={addTaskFuncWithValue}
       />
       <__addButton
         modifier={props.modifier}
-        addButtonClickFunc={addButtonClickFunc}
+        addButtonClickFunc={addTaskFuncWithValue}
       />
       <__checkbox
         modifier={props.modifier}
@@ -23,11 +24,10 @@ function AddTaskPanel(props){
       <__label
         modifier={props.modifier}
       />
-
     </div>
   )
 
-  function addButtonClickFunc(){
+  function addTaskFuncWithValue(){
     if(inputValue && inputValue!=''){
       props.addTaskFunc(inputValue);
     }

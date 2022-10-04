@@ -29,6 +29,7 @@ function App() {
       <TasksContainer 
         tasks={tasks}
         isCompletedTasksHidden = {isCompletedTasksHidden}
+        addTaskFunc={addTaskFunc}
       />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -47,8 +48,14 @@ function App() {
     </div>
   );
 
+  function altTask(taskLabel,index){
+    let altTasks = tasks.map(item=> item);//Создаём копию массива из state
+    altTasks[index].label = taskLabel;
+    setTasks(altTasks);
+  }
+
   function addTaskFunc(taskLabel){
-    let altTasks = tasks.map(item=> item);
+    let altTasks = tasks.map(item=> item);//Создаём копию массива из state
     altTasks.push({label:taskLabel, isChecked:false});
     setTasks(altTasks);
 
