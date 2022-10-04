@@ -10,6 +10,7 @@ function TasksContainer(props){
       key={index.toString()}
       isCompletedTasksHidden = {props.isCompletedTasksHidden}
       addTaskFunc={props.addTaskFunc}
+      altTask = {props.altTask}
     />)
   })
   return (

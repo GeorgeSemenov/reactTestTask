@@ -1,3 +1,4 @@
+import Task__input from './__input/Task__input.js';
 import { useState } from 'react';
 import Task__label from './__label/Task__label.js';
 import Task__checkbox from './__checkbox/Task__checkbox.js';
@@ -12,6 +13,9 @@ function Task(props){
       />
       <Task__label
         taskName={props.taskName}
+      />
+      <Task__input
+        
       />
     </li>
   )

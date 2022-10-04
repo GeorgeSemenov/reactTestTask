@@ -17,7 +17,7 @@ if(answer.split('.').length>1){//Если указан тэг
 if(process.argv[2]){//Если скрипт вызван с аргументом, т.е. в блоке нужно создать элемент
   parentName    = scfl(process.argv[2]);
   wicp(`./${parentName}.js`,
-    `import ${compName} from './${compName}/${parentName + compName}.js';\n`
+    `import ${parentName + compName} from './${compName}/${parentName + compName}.js';\n`
   )
 }
 
