@@ -13,7 +13,7 @@
   top: 50%;
   left: 100%;
   background-color: black;
-  transition: left 0.5s linear;
+  transition: left 0.25s linear;
 }
 
 .task_checked .task__label{

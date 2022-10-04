@@ -1,5 +1,11 @@
 .task{
   display: flex;
   align-items: center;
-  transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear, height 0.5s linear;
+  height: 50px;
+}
+
+.task_hidden{
+  height: 0;
+  overflow: hidden;
 }

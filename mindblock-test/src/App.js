@@ -28,6 +28,7 @@ function App() {
       <h3 className="tasksContainer-title">you have {tasks.length} tasks</h3>
       <TasksContainer 
         tasks={tasks}
+        isCompletedTasksHidden = {isCompletedTasksHidden}
       />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

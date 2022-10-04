@@ -5,7 +5,7 @@ import './Task.css';
 function Task(props){
   const [isChecked, setCheckStatus] = useState(props.isChecked);
   return(
-    <li className={"task" + (isChecked? " task_checked": "")}>
+    <li className={"task" + returnAdditionalClasses()}>
       <Task__checkbox
         onClickFunc = {handleClick}
         isChecked={isChecked}
@@ -16,5 +16,11 @@ function Task(props){
     </li>
   )
   function handleClick(){isChecked? setCheckStatus(false): setCheckStatus(true);}
+  function returnAdditionalClasses(){
+    let additionalClasses = '';
+    additionalClasses += isChecked? " task_checked": "";
+    additionalClasses += (props.isCompletedTasksHidden && isChecked) ? ' task_hidden':''
+    return additionalClasses;
+  }
 }
 export default Task;
