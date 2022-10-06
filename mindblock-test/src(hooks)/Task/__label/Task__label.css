@@ -2,7 +2,6 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
-  cursor:  pointer;
 }
 
 .task__label:before{

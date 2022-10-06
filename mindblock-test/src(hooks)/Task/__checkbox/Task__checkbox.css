@@ -1,0 +1,35 @@
+.task__checkbox{
+  position: relative;
+  width:  30px;
+  height:  30px;
+  display: inline-block;
+  appearance: none;
+  border:  1px solid;
+  border-radius: 100%;
+  cursor:  pointer;
+}
+.task__checkbox:checked{
+  background-color: gray;
+  opacity: 0.5;
+}
+.task__checkbox:checked:before,
+.task__checkbox:checked:after{
+  display: block;
+  content:  '';
+  width: 10%;
+  background-color: black;
+  position: absolute;
+  left: 50%;
+}
+.task__checkbox:checked:before{
+  height: 70%;
+  transform: rotate(45deg);
+  top: 0;
+  left: 50%;
+}
+.task__checkbox:checked:after{
+  height: 35%;
+  transform: rotate(-45deg);
+  top: 30%;
+  left: 20%;
+}
